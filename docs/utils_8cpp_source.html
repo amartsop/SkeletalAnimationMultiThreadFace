@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Skeletal Animation Mulrithread: src/utils.cpp Source File</title>
+<title>Skeletal Animation Mulrithread Face: src/utils.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Skeletal Animation Mulrithread
+   <div id="projectname">Skeletal Animation Mulrithread Face
    </div>
   </td>
  </tr>
@@ -72,7 +72,7 @@ $(function() {
 <a href="utils_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../include/utils.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Convert comma-delimited string to vector of integers</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>std::vector&lt;int&gt; Utils::analog_str_buf_to_int_vec(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classUtils.html#a791bb2a3fc95eab84b59f43b76c55b3b">    4</a></span>std::vector&lt;int&gt; <a class="code hl_function" href="classUtils.html#a791bb2a3fc95eab84b59f43b76c55b3b">Utils::analog_str_buf_to_int_vec</a>(<span class="keyword">const</span> std::string&amp; str)</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="comment">// Initialize data vector</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    std::vector&lt;int&gt; data_vec;</div>
@@ -92,7 +92,7 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Convert comma-delimited string to vector of floats</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>std::vector&lt;double&gt; Utils::analog_str_buf_to_double_vec(<span class="keyword">const</span> std::string&amp; str)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979">   24</a></span>std::vector&lt;double&gt; <a class="code hl_function" href="classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979">Utils::analog_str_buf_to_double_vec</a>(<span class="keyword">const</span> std::string&amp; str)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// Initialize data vector</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;double&gt; data_vec;</div>
@@ -112,7 +112,7 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// Load Eigen double matrix from csv file</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>Eigen::MatrixXd Utils::load_matrix_data(std::string filename)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classUtils.html#a1f1a1334ba35267f0f25db3c359b69fc">   44</a></span>Eigen::MatrixXd <a class="code hl_function" href="classUtils.html#a1f1a1334ba35267f0f25db3c359b69fc">Utils::load_matrix_data</a>(std::string filename)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="comment">// Matrix entries</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  std::vector&lt;double&gt; matrix_entries;</div>
@@ -159,6 +159,9 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      Eigen::RowMajor&gt;&gt;(matrix_entries.data(), matrix_row_number,</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      matrix_entries.size() / matrix_row_number);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="ttc" id="aclassUtils_html_a1f1a1334ba35267f0f25db3c359b69fc"><div class="ttname"><a href="classUtils.html#a1f1a1334ba35267f0f25db3c359b69fc">Utils::load_matrix_data</a></div><div class="ttdeci">static Eigen::MatrixXd load_matrix_data(std::string filename)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00044">utils.cpp:44</a></div></div>
+<div class="ttc" id="aclassUtils_html_a6e7193f2c602f2f8e1553c2cfefe9979"><div class="ttname"><a href="classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979">Utils::analog_str_buf_to_double_vec</a></div><div class="ttdeci">static std::vector&lt; double &gt; analog_str_buf_to_double_vec(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00024">utils.cpp:24</a></div></div>
+<div class="ttc" id="aclassUtils_html_a791bb2a3fc95eab84b59f43b76c55b3b"><div class="ttname"><a href="classUtils.html#a791bb2a3fc95eab84b59f43b76c55b3b">Utils::analog_str_buf_to_int_vec</a></div><div class="ttdeci">static std::vector&lt; int &gt; analog_str_buf_to_int_vec(const std::string &amp;str)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00004">utils.cpp:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

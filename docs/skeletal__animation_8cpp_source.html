@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Skeletal Animation Mulrithread: src/skeletal_animation.cpp Source File</title>
+<title>Skeletal Animation Mulrithread Face: src/skeletal_animation.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Skeletal Animation Mulrithread
+   <div id="projectname">Skeletal Animation Mulrithread Face
    </div>
   </td>
  </tr>
@@ -72,99 +72,123 @@ $(function() {
 <a href="skeletal__animation_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../include/skeletal_animation.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Initialize skeletal animation</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keywordtype">void</span> SkeletalAnimation::initialize(igl::opengl::glfw::Viewer* viewer, </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    Exoskeleton* left_exo, AnimatedHand* anim_hand, MenuHandler* menu_handler)</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classSkeletalAnimation.html#a9e13b02a0c0cf4bc9d253c9c6bf92d34">    4</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classSkeletalAnimation.html#a9e13b02a0c0cf4bc9d253c9c6bf92d34">SkeletalAnimation::initialize</a>(igl::opengl::glfw::Viewer* viewer, </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <a class="code hl_class" href="classExoskeleton.html">Exoskeleton</a>* left_exo, <a class="code hl_class" href="classAnimatedHand.html">AnimatedHand</a>* anim_hand, <a class="code hl_class" href="classMenuHandler.html">MenuHandler</a>* menu_handler)</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="comment">// Get exoskeleton handler pointer</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    m_left_exo = left_exo;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#a04775dea7c8355521a08bfe2549d5dd2">m_left_exo</a> = left_exo;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">// Get animation hand pointer</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    m_anim_hand = anim_hand;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#a7cb7f711a838448af7e3ea6ceba51f3e">m_anim_hand</a> = anim_hand;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Get menu handler pointer</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    m_menu_handler = menu_handler;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#a3e813a339917e26b1f327aa1d0fde3d1">m_menu_handler</a> = menu_handler;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Main animation loop</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">bool</span> SkeletalAnimation::animation_loop(igl::opengl::glfw::Viewer&amp; viewer)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f">   18</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f">SkeletalAnimation::animation_loop</a>(igl::opengl::glfw::Viewer&amp; viewer)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">if</span> (viewer.core().is_animating)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Initialize if ports are set</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (m_menu_handler-&gt;are_ports_set() &amp;&amp; m_initialize_animation)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classSkeletalAnimation.html#a3e813a339917e26b1f327aa1d0fde3d1">m_menu_handler</a>-&gt;<a class="code hl_function" href="classMenuHandler.html#a0d1a6b3c99aabe3e3d2f88e3a6b15b15">are_ports_set</a>() &amp;&amp; <a class="code hl_variable" href="classSkeletalAnimation.html#a81a500b79c7d5f150996799c5b097124">m_initialize_animation</a>)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="comment">// Setup meshes</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            setup_meshes(viewer);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <a class="code hl_function" href="classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9">setup_meshes</a>(viewer);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="comment">// Dont initialize animations again</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            m_initialize_animation = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_variable" href="classSkeletalAnimation.html#a81a500b79c7d5f150996799c5b097124">m_initialize_animation</a> = 0;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span>(m_menu_handler-&gt;are_ports_set())</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSkeletalAnimation.html#a3e813a339917e26b1f327aa1d0fde3d1">m_menu_handler</a>-&gt;<a class="code hl_function" href="classMenuHandler.html#a0d1a6b3c99aabe3e3d2f88e3a6b15b15">are_ports_set</a>())</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="comment">// Get euler angles</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keyword">auto</span> euler_id =</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                m_anim_hand-&gt;get_hand_angles(m_left_exo-&gt;get_joint_angles());</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <a class="code hl_variable" href="classSkeletalAnimation.html#a7cb7f711a838448af7e3ea6ceba51f3e">m_anim_hand</a>-&gt;<a class="code hl_function" href="classAnimatedHand.html#addb9ca7250c9bd196595cd10ced9e727">get_hand_angles</a>(<a class="code hl_variable" href="classSkeletalAnimation.html#a04775dea7c8355521a08bfe2549d5dd2">m_left_exo</a>-&gt;<a class="code hl_function" href="classExoskeleton.html#a28cfac80989e1548d0fcec09e2c5b1d6">get_joint_angles</a>());</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment">// Update left hand</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            m_left_hand-&gt;update(euler_id);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            viewer.data_list.at(0).set_vertices(m_left_hand-&gt;get_vertices());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_variable" href="classSkeletalAnimation.html#ace8a7ddd1b56aba9cef62a98f5f428db">m_left_hand</a>-&gt;update(euler_id);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            viewer.data_list.at(0).set_vertices(<a class="code hl_variable" href="classSkeletalAnimation.html#ace8a7ddd1b56aba9cef62a98f5f428db">m_left_hand</a>-&gt;get_vertices());</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="comment">// Update right hand</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            m_right_hand-&gt;update(euler_id);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            viewer.data_list.at(1).set_vertices(m_right_hand-&gt;get_vertices());</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="classSkeletalAnimation.html#add7552987faade9170373c7a169acbd4">m_right_hand</a>-&gt;update(euler_id);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            viewer.data_list.at(1).set_vertices(<a class="code hl_variable" href="classSkeletalAnimation.html#add7552987faade9170373c7a169acbd4">m_right_hand</a>-&gt;get_vertices());</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="comment">// Update face</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            viewer.data_list.at(2).set_vertices(m_face-&gt;get_vertices());</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            viewer.data_list.at(2).set_vertices(<a class="code hl_variable" href="classSkeletalAnimation.html#abd24a912cc62e7c57f61411de9cddfe1">m_face</a>-&gt;get_vertices());</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    } </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> SkeletalAnimation::setup_meshes(igl::opengl::glfw::Viewer&amp; viewer)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9">   54</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9">SkeletalAnimation::setup_meshes</a>(igl::opengl::glfw::Viewer&amp; viewer)</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Resize viewer data list</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    viewer.data_list.resize(3);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Set mesh for face</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    m_face = std::make_shared&lt;Face&gt;();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#abd24a912cc62e7c57f61411de9cddfe1">m_face</a> = std::make_shared&lt;Face&gt;();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    viewer.data_list.at(2).set_mesh(m_face-&gt;get_vertices(),</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        m_face-&gt;get_surface_indices());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    viewer.data_list.at(2).set_mesh(<a class="code hl_variable" href="classSkeletalAnimation.html#abd24a912cc62e7c57f61411de9cddfe1">m_face</a>-&gt;get_vertices(),</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#abd24a912cc62e7c57f61411de9cddfe1">m_face</a>-&gt;get_surface_indices());</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>   <span class="comment">// Define serial COM for left exoskeleton</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::string serial_com_left = m_menu_handler-&gt;get_left_exoskeleton_port();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::string serial_com_left = <a class="code hl_variable" href="classSkeletalAnimation.html#a3e813a339917e26b1f327aa1d0fde3d1">m_menu_handler</a>-&gt;<a class="code hl_function" href="classMenuHandler.html#a99ef8b4eed51bb9d82fec9f8243f9674">get_left_exoskeleton_port</a>();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>   <span class="comment">// Define serial COM for right exoskeleton</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::string serial_com_right = m_menu_handler-&gt;get_right_exoskeleton_port();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::string serial_com_right = <a class="code hl_variable" href="classSkeletalAnimation.html#a3e813a339917e26b1f327aa1d0fde3d1">m_menu_handler</a>-&gt;<a class="code hl_function" href="classMenuHandler.html#a48e6fb0053eab65d523920d1c1b2bc6b">get_right_exoskeleton_port</a>();</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// Define baudrate</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> baud_rate = 115200;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Initialize left exoskeleton</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    m_left_exo-&gt;initialize(serial_com_left, baud_rate);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#a04775dea7c8355521a08bfe2549d5dd2">m_left_exo</a>-&gt;<a class="code hl_function" href="classExoskeleton.html#a16bc036a0caad1882dd602d047b1d843">initialize</a>(serial_com_left, baud_rate);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Initialize right exoskeleton (to be done)</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Initialize left hand</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    m_left_hand = std::make_shared&lt;Hand&gt;(m_left_exo, m_anim_hand,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        m_hand_mesh_name, m_hand_graph_name, m_hand_texture_name, 0, </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        m_left_origin);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#ace8a7ddd1b56aba9cef62a98f5f428db">m_left_hand</a> = std::make_shared&lt;Hand&gt;(<a class="code hl_variable" href="classSkeletalAnimation.html#a04775dea7c8355521a08bfe2549d5dd2">m_left_exo</a>, <a class="code hl_variable" href="classSkeletalAnimation.html#a7cb7f711a838448af7e3ea6ceba51f3e">m_anim_hand</a>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#aefac8541dae0ca2f6419e981442d49c8">m_hand_mesh_name</a>, <a class="code hl_variable" href="classSkeletalAnimation.html#ad93d3bdb599c6599af01e1a78f33d20f">m_hand_graph_name</a>, <a class="code hl_variable" href="classSkeletalAnimation.html#a2e6e78964b12fb4cb8c1cd80dea2c8ea">m_hand_texture_name</a>, 0, </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#aad65c543fa2b0a60643292537e6aa215">m_left_origin</a>);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// Set mesh for left hand</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    viewer.data_list.at(0).set_mesh(m_left_hand-&gt;get_vertices(), </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        m_left_hand-&gt;get_surface_indices());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    viewer.data_list.at(0).set_mesh(<a class="code hl_variable" href="classSkeletalAnimation.html#ace8a7ddd1b56aba9cef62a98f5f428db">m_left_hand</a>-&gt;get_vertices(), </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#ace8a7ddd1b56aba9cef62a98f5f428db">m_left_hand</a>-&gt;get_surface_indices());</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// Initialze right hand</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    m_right_hand = std::make_shared&lt;Hand&gt;(m_left_exo, m_anim_hand,</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        m_hand_mesh_name, m_hand_graph_name, m_hand_texture_name, 1,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        m_right_origin);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_variable" href="classSkeletalAnimation.html#add7552987faade9170373c7a169acbd4">m_right_hand</a> = std::make_shared&lt;Hand&gt;(<a class="code hl_variable" href="classSkeletalAnimation.html#a04775dea7c8355521a08bfe2549d5dd2">m_left_exo</a>, <a class="code hl_variable" href="classSkeletalAnimation.html#a7cb7f711a838448af7e3ea6ceba51f3e">m_anim_hand</a>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#aefac8541dae0ca2f6419e981442d49c8">m_hand_mesh_name</a>, <a class="code hl_variable" href="classSkeletalAnimation.html#ad93d3bdb599c6599af01e1a78f33d20f">m_hand_graph_name</a>, <a class="code hl_variable" href="classSkeletalAnimation.html#a2e6e78964b12fb4cb8c1cd80dea2c8ea">m_hand_texture_name</a>, 1,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#aa572b178fe31ca725618f18e47b4d92f">m_right_origin</a>);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// Set mesh for right hand</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    viewer.data_list.at(1).set_mesh(m_right_hand-&gt;get_vertices(), </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        m_right_hand-&gt;get_surface_indices());</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    viewer.data_list.at(1).set_mesh(<a class="code hl_variable" href="classSkeletalAnimation.html#add7552987faade9170373c7a169acbd4">m_right_hand</a>-&gt;get_vertices(), </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_variable" href="classSkeletalAnimation.html#add7552987faade9170373c7a169acbd4">m_right_hand</a>-&gt;get_surface_indices());</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="ttc" id="aclassAnimatedHand_html"><div class="ttname"><a href="classAnimatedHand.html">AnimatedHand</a></div><div class="ttdef"><b>Definition:</b> <a href="animated__hand_8h_source.html#l00009">animated_hand.h:10</a></div></div>
+<div class="ttc" id="aclassAnimatedHand_html_addb9ca7250c9bd196595cd10ced9e727"><div class="ttname"><a href="classAnimatedHand.html#addb9ca7250c9bd196595cd10ced9e727">AnimatedHand::get_hand_angles</a></div><div class="ttdeci">std::vector&lt; EulerID &gt; get_hand_angles(const std::vector&lt; double &gt; &amp;joint_angles)</div><div class="ttdef"><b>Definition:</b> <a href="animated__hand_8cpp_source.html#l00004">animated_hand.cpp:4</a></div></div>
+<div class="ttc" id="aclassExoskeleton_html"><div class="ttname"><a href="classExoskeleton.html">Exoskeleton</a></div><div class="ttdef"><b>Definition:</b> <a href="exoskeleton_8h_source.html#l00012">exoskeleton.h:13</a></div></div>
+<div class="ttc" id="aclassExoskeleton_html_a16bc036a0caad1882dd602d047b1d843"><div class="ttname"><a href="classExoskeleton.html#a16bc036a0caad1882dd602d047b1d843">Exoskeleton::initialize</a></div><div class="ttdeci">void initialize(const std::string &amp;serial_com, unsigned int serial_baudrate)</div><div class="ttdef"><b>Definition:</b> <a href="exoskeleton_8cpp_source.html#l00004">exoskeleton.cpp:4</a></div></div>
+<div class="ttc" id="aclassExoskeleton_html_a28cfac80989e1548d0fcec09e2c5b1d6"><div class="ttname"><a href="classExoskeleton.html#a28cfac80989e1548d0fcec09e2c5b1d6">Exoskeleton::get_joint_angles</a></div><div class="ttdeci">std::vector&lt; double &gt; get_joint_angles(void)</div><div class="ttdef"><b>Definition:</b> <a href="exoskeleton_8cpp_source.html#l00030">exoskeleton.cpp:30</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html"><div class="ttname"><a href="classMenuHandler.html">MenuHandler</a></div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00016">menu_handler.h:17</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a0d1a6b3c99aabe3e3d2f88e3a6b15b15"><div class="ttname"><a href="classMenuHandler.html#a0d1a6b3c99aabe3e3d2f88e3a6b15b15">MenuHandler::are_ports_set</a></div><div class="ttdeci">bool are_ports_set(void)</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00025">menu_handler.h:25</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a48e6fb0053eab65d523920d1c1b2bc6b"><div class="ttname"><a href="classMenuHandler.html#a48e6fb0053eab65d523920d1c1b2bc6b">MenuHandler::get_right_exoskeleton_port</a></div><div class="ttdeci">std::string get_right_exoskeleton_port(void)</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00031">menu_handler.h:31</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a99ef8b4eed51bb9d82fec9f8243f9674"><div class="ttname"><a href="classMenuHandler.html#a99ef8b4eed51bb9d82fec9f8243f9674">MenuHandler::get_left_exoskeleton_port</a></div><div class="ttdeci">std::string get_left_exoskeleton_port(void)</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00028">menu_handler.h:28</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a04775dea7c8355521a08bfe2549d5dd2"><div class="ttname"><a href="classSkeletalAnimation.html#a04775dea7c8355521a08bfe2549d5dd2">SkeletalAnimation::m_left_exo</a></div><div class="ttdeci">Exoskeleton * m_left_exo</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00066">skeletal_animation.h:66</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a2e6e78964b12fb4cb8c1cd80dea2c8ea"><div class="ttname"><a href="classSkeletalAnimation.html#a2e6e78964b12fb4cb8c1cd80dea2c8ea">SkeletalAnimation::m_hand_texture_name</a></div><div class="ttdeci">std::string m_hand_texture_name</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00060">skeletal_animation.h:60</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a3e813a339917e26b1f327aa1d0fde3d1"><div class="ttname"><a href="classSkeletalAnimation.html#a3e813a339917e26b1f327aa1d0fde3d1">SkeletalAnimation::m_menu_handler</a></div><div class="ttdeci">MenuHandler * m_menu_handler</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00072">skeletal_animation.h:72</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a7cb7f711a838448af7e3ea6ceba51f3e"><div class="ttname"><a href="classSkeletalAnimation.html#a7cb7f711a838448af7e3ea6ceba51f3e">SkeletalAnimation::m_anim_hand</a></div><div class="ttdeci">AnimatedHand * m_anim_hand</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00069">skeletal_animation.h:69</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a81a500b79c7d5f150996799c5b097124"><div class="ttname"><a href="classSkeletalAnimation.html#a81a500b79c7d5f150996799c5b097124">SkeletalAnimation::m_initialize_animation</a></div><div class="ttdeci">bool m_initialize_animation</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00087">skeletal_animation.h:87</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a9468d895fd44e9d9220cf266396bdf6f"><div class="ttname"><a href="classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f">SkeletalAnimation::animation_loop</a></div><div class="ttdeci">bool animation_loop(igl::opengl::glfw::Viewer &amp;viewer)</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8cpp_source.html#l00018">skeletal_animation.cpp:18</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_a9e13b02a0c0cf4bc9d253c9c6bf92d34"><div class="ttname"><a href="classSkeletalAnimation.html#a9e13b02a0c0cf4bc9d253c9c6bf92d34">SkeletalAnimation::initialize</a></div><div class="ttdeci">void initialize(igl::opengl::glfw::Viewer *viewer, Exoskeleton *left_exo, AnimatedHand *anim_hand, MenuHandler *menu_handler)</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8cpp_source.html#l00004">skeletal_animation.cpp:4</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_aa572b178fe31ca725618f18e47b4d92f"><div class="ttname"><a href="classSkeletalAnimation.html#aa572b178fe31ca725618f18e47b4d92f">SkeletalAnimation::m_right_origin</a></div><div class="ttdeci">Eigen::Vector3d m_right_origin</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00084">skeletal_animation.h:84</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_aad65c543fa2b0a60643292537e6aa215"><div class="ttname"><a href="classSkeletalAnimation.html#aad65c543fa2b0a60643292537e6aa215">SkeletalAnimation::m_left_origin</a></div><div class="ttdeci">Eigen::Vector3d m_left_origin</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00081">skeletal_animation.h:81</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_abd24a912cc62e7c57f61411de9cddfe1"><div class="ttname"><a href="classSkeletalAnimation.html#abd24a912cc62e7c57f61411de9cddfe1">SkeletalAnimation::m_face</a></div><div class="ttdeci">std::shared_ptr&lt; Face &gt; m_face</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00078">skeletal_animation.h:78</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_ace8a7ddd1b56aba9cef62a98f5f428db"><div class="ttname"><a href="classSkeletalAnimation.html#ace8a7ddd1b56aba9cef62a98f5f428db">SkeletalAnimation::m_left_hand</a></div><div class="ttdeci">std::shared_ptr&lt; Hand &gt; m_left_hand</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00075">skeletal_animation.h:75</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_ad93d3bdb599c6599af01e1a78f33d20f"><div class="ttname"><a href="classSkeletalAnimation.html#ad93d3bdb599c6599af01e1a78f33d20f">SkeletalAnimation::m_hand_graph_name</a></div><div class="ttdeci">std::string m_hand_graph_name</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00056">skeletal_animation.h:56</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_add7552987faade9170373c7a169acbd4"><div class="ttname"><a href="classSkeletalAnimation.html#add7552987faade9170373c7a169acbd4">SkeletalAnimation::m_right_hand</a></div><div class="ttdeci">std::shared_ptr&lt; Hand &gt; m_right_hand</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00075">skeletal_animation.h:75</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_aeec95b947702a8794ce630c4c61d3eb9"><div class="ttname"><a href="classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9">SkeletalAnimation::setup_meshes</a></div><div class="ttdeci">void setup_meshes(igl::opengl::glfw::Viewer &amp;viewer)</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8cpp_source.html#l00054">skeletal_animation.cpp:54</a></div></div>
+<div class="ttc" id="aclassSkeletalAnimation_html_aefac8541dae0ca2f6419e981442d49c8"><div class="ttname"><a href="classSkeletalAnimation.html#aefac8541dae0ca2f6419e981442d49c8">SkeletalAnimation::m_hand_mesh_name</a></div><div class="ttdeci">std::string m_hand_mesh_name</div><div class="ttdef"><b>Definition:</b> <a href="skeletal__animation_8h_source.html#l00052">skeletal_animation.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
