@@ -1,4 +1,4 @@
 <map id="Face::setup_tcp_communication" name="Face::setup_tcp_communication">
-<area shape="rect" id="node1" title=" " alt="" coords="144,5,375,32"/>
-<area shape="rect" id="node2" href="$classFace.html#afdb634bc2d5287ba0d62e46b57e9dc2e" title=" " alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node1" title="Setup communication with python server." alt="" coords="144,5,375,32"/>
+<area shape="rect" id="node2" href="$classFace.html#afdb634bc2d5287ba0d62e46b57e9dc2e" title="Constructor." alt="" coords="5,5,96,32"/>
 </map>

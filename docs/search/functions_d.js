@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['serialcom_0',['SerialCOM',['../classSerialCOM.html#aa1013db36ab12d251ecdcc2ccd8be5c8',1,'SerialCOM']]],
-  ['setup_5fmeshes_1',['setup_meshes',['../classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9',1,'SkeletalAnimation']]],
-  ['setup_5ftcp_5fcommunication_2',['setup_tcp_communication',['../classFace.html#ad8a094484099fb45154ea0cec1a9c73d',1,'Face']]],
-  ['skeletalanimation_3',['SkeletalAnimation',['../classSkeletalAnimation.html#a6d2c0b5ccd39942f1f97a6a33e69fd1c',1,'SkeletalAnimation']]]
+  ['readline_0',['readLine',['../classSerialCOM.html#a9ba1662c9c34f0a01ff4c05f063105a7',1,'SerialCOM']]],
+  ['rendering_1',['Rendering',['../classRendering.html#a2d6135f6f0563031d59f12e81c15416d',1,'Rendering']]],
+  ['rotation_2',['rotation',['../classEulerRotations.html#a59359356cd2301630d6d58f642acd07b',1,'EulerRotations::rotation(double phi, double theta, double psi)'],['../classEulerRotations.html#a2fe3fd92ef7396d9264338a50c0cc557',1,'EulerRotations::rotation(Eigen::Vector3d euler_angles)'],['../classEulerRotations.html#a69bd0d4a0380004df4d6acfa6b3b7eb1',1,'EulerRotations::rotation(std::vector&lt; double &gt; euler_angles)'],['../classEulerRotations.html#a31a31229859361f793ef9f2760df2b27',1,'EulerRotations::rotation(Euler euler_angles)']]]
 ];

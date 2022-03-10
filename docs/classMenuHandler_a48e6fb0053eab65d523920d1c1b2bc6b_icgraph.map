@@ -1,6 +1,6 @@
 <map id="MenuHandler::get_right_exoskeleton_port" name="MenuHandler::get_right_exoskeleton_port">
-<area shape="rect" id="node1" title=" " alt="" coords="611,5,785,47"/>
-<area shape="rect" id="node2" href="$classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9" title=" " alt="" coords="413,5,563,47"/>
-<area shape="rect" id="node3" href="$classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f" title=" " alt="" coords="216,5,365,47"/>
-<area shape="rect" id="node4" href="$classRendering.html#a2d6135f6f0563031d59f12e81c15416d" title=" " alt="" coords="5,13,168,39"/>
+<area shape="rect" id="node1" title="Get the USB port for the right exoskeleton." alt="" coords="611,5,785,47"/>
+<area shape="rect" id="node2" href="$classSkeletalAnimation.html#aeec95b947702a8794ce630c4c61d3eb9" title="Setup meshes." alt="" coords="413,5,563,47"/>
+<area shape="rect" id="node3" href="$classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f" title="Animation loop callback." alt="" coords="216,5,365,47"/>
+<area shape="rect" id="node4" href="$classRendering.html#a2d6135f6f0563031d59f12e81c15416d" title="Rendering constructor." alt="" coords="5,13,168,39"/>
 </map>

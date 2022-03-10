@@ -1,6 +1,6 @@
 <map id="MenuHandler::generate_absolute_filename" name="MenuHandler::generate_absolute_filename">
-<area shape="rect" id="node1" title=" " alt="" coords="688,5,863,47"/>
-<area shape="rect" id="node2" href="$classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0" title=" " alt="" coords="435,5,640,47"/>
-<area shape="rect" id="node3" href="$classMenuHandler.html#a425100756a8e8bfae6ed09827767505b" title=" " alt="" coords="216,13,387,39"/>
-<area shape="rect" id="node4" href="$classRendering.html#a2d6135f6f0563031d59f12e81c15416d" title=" " alt="" coords="5,13,168,39"/>
+<area shape="rect" id="node1" title="Generate absolute file name." alt="" coords="688,5,863,47"/>
+<area shape="rect" id="node2" href="$classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0" title="Get available USB ports." alt="" coords="435,5,640,47"/>
+<area shape="rect" id="node3" href="$classMenuHandler.html#a425100756a8e8bfae6ed09827767505b" title="Menu callback function." alt="" coords="216,13,387,39"/>
+<area shape="rect" id="node4" href="$classRendering.html#a2d6135f6f0563031d59f12e81c15416d" title="Rendering constructor." alt="" coords="5,13,168,39"/>
 </map>

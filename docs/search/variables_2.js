@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['euler_5fangles_0',['euler_angles',['../structAnimatedHand_1_1EulerID.html#a7b6487aa480c9dcdaacc65fd56adf307',1,'AnimatedHand::EulerID']]]
+  ['cap_0',['cap',['../classface__mesh__server_1_1FaceMeshServer.html#a70924879e347130f869443ebeaa3341a',1,'face_mesh_server::FaceMeshServer']]]
 ];

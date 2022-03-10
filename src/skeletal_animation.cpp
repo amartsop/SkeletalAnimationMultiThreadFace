@@ -1,6 +1,13 @@
 #include "../include/skeletal_animation.h"
 
-// Initialize skeletal animation
+/**
+ * @brief Initializes skeletal animation by copying the input arguments
+ * to the member variables.
+ * @param viewer Pointer to the igl Viewer object.
+ * @param left_exo Pointer to the left exoskeleton object.
+ * @param anim_hand Pointer to the animated hand object.
+ * @param menu_handler Pointer to menu handler object.
+ */
 void SkeletalAnimation::initialize(igl::opengl::glfw::Viewer* viewer, 
     Exoskeleton* left_exo, AnimatedHand* anim_hand, MenuHandler* menu_handler)
 {
@@ -14,7 +21,15 @@ void SkeletalAnimation::initialize(igl::opengl::glfw::Viewer* viewer,
     m_menu_handler = menu_handler;
 }
 
-// Main animation loop
+/**
+ * @brief 
+ *  This is the main animation callback function. This is where the rendering is 
+ * happening. The function is passed as a lambda function to
+ * the Viewer handler (see main.cpp).
+ * @param viewer Reference to the viewer handle.
+ * @return true Animation should stop.
+ * @return false Animations keeps playing.
+ */
 bool SkeletalAnimation::animation_loop(igl::opengl::glfw::Viewer& viewer)
 {
     if (viewer.core().is_animating)
@@ -51,6 +66,14 @@ bool SkeletalAnimation::animation_loop(igl::opengl::glfw::Viewer& viewer)
     return false;
 }
 
+/**
+ * @brief This function setups the exoskeletons. First it initializes the 
+ * serial communications and defines the hand shared pointers. It also generates 
+ * the hand meshes and passes them to the viewer mesh list (or data_list). See 
+ * how libigl handles multiple meshes at
+ * https://github.com/libigl/libigl/blob/main/tutorial/107_MultipleMeshes/main.cpp.
+ * @param viewer A reference to the viewer handle.
+ */
 void SkeletalAnimation::setup_meshes(igl::opengl::glfw::Viewer& viewer)
 {
     // Resize viewer data list

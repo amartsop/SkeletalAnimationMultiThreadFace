@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['red_0',['red',['../structHand_1_1PngImage.html#a80a2e57e915b14970969c52b2dfdbbd9',1,'Hand::PngImage']]],
-  ['result_1',['result',['../namespaceports__read.html#a43f7f45e033db4f3d6332693b6e8875d',1,'ports_read']]],
-  ['rot_5fdir_2',['rot_dir',['../structAnimatedHand_1_1HandMap.html#a60c38facec781d1febb4e86d5db5f4f8',1,'AnimatedHand::HandMap']]],
-  ['rot_5ftype_3',['rot_type',['../structAnimatedHand_1_1HandMap.html#a113b54508ac52298d995bb48010267bb',1,'AnimatedHand::HandMap']]]
+  ['phi_0',['phi',['../structEulerRotations_1_1Euler.html#a73ac076fa5b23cd84218f90079a529fc',1,'EulerRotations::Euler']]],
+  ['port_1',['port',['../classface__mesh__server_1_1FaceMeshServer.html#a18c360f586dac62064eae46e20c12ba5',1,'face_mesh_server::FaceMeshServer']]],
+  ['ports_2',['ports',['../namespaceports__read.html#aa5030796fe8c02095d7b9dfcaf027219',1,'ports_read']]],
+  ['ports_5ffile_3',['ports_file',['../namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61',1,'ports_read']]],
+  ['psi_4',['psi',['../structEulerRotations_1_1Euler.html#a85022b8cb78d619c2477eb1a599b5ab4',1,'EulerRotations::Euler']]]
 ];

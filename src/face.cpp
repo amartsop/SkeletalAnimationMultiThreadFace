@@ -1,5 +1,11 @@
 #include "../include/face.h"
 
+/**
+ * @brief Construct a new Face:: Face object
+ * It initializes the tcp communcations and the asychronous functionalities. 
+ * The indices of the face mesh are stored in the "vertices_connections.csv"
+ * and they are converted to an Eigen::MatrixXi.
+ */
 Face::Face()
 {
     // Get absolute file path
@@ -27,10 +33,11 @@ Face::Face()
     m_rot_mat = EulerRotations::rotation(0, M_PI, M_PI);
 
 }
-
-
-
-// Get vertices
+/**
+ * @brief It is the point of entry that feeds the animation
+ * loop with the face vertices data. It also manages the asynchronous threading.
+ * @return Eigen::MatrixXd The face vertices. 
+ */
 Eigen::MatrixXd Face::get_vertices(void)
 {
     // Set termination flag for asychronous function
@@ -46,7 +53,13 @@ Eigen::MatrixXd Face::get_vertices(void)
     return vertices;
 }
 
-// Incoming data callback
+/**
+ * @brief This is the callback function for reading asynchronously the incoming 
+ * data (vertices) from the server. The data is sent as a json file, so 
+ * a parser is also used for reading the x, y and z coordinates of each vertex
+ * of the face mesh.
+ * @return Eigen::MatrixXd The vertex pointcloud
+ */
 Eigen::MatrixXd Face::incoming_data_callback(void)
 {
     while(!m_return_value)
@@ -66,7 +79,7 @@ Eigen::MatrixXd Face::incoming_data_callback(void)
   
         // Initialize point cloud
         nlohmann::basic_json<>::value_type x_pc, y_pc, z_pc;
-  
+
         try
         {
             // Parse json file 
@@ -97,15 +110,36 @@ Eigen::MatrixXd Face::incoming_data_callback(void)
                 vol_mesh_vertices(i, 2) = z_pc[i];
             }
 
+            // Rotate and scale vertices
             m_vol_mesh_vertices = (m_scale_mat * m_rot_mat *
                 vol_mesh_vertices.transpose()).transpose();
+
+            // Find centre of geometry
+            double x_cg = m_vol_mesh_vertices.col(0).sum() / m_vertices_num;
+            double y_cg = m_vol_mesh_vertices.col(1).sum() / m_vertices_num;
+            double z_cg = m_vol_mesh_vertices.col(2).sum() / m_vertices_num;
+
+            // Reset face offset
+            Eigen::Vector3d face_offset = m_face_offset +
+                Eigen::Vector3d({x_cg, y_cg, z_cg});
+
+            m_vol_mesh_vertices -= (translation_matrix(face_offset,
+                m_vertices_num));
         }
     }
 
     return m_vol_mesh_vertices; 
 }
 
-// Start listening to python data
+/**
+ * @brief Since the libraries for face landmarking are all written in 
+ * Python, we establish an Inter-process communication (IPC), to 
+ * get all the data in our C++ program. In this case the IPC is implemented 
+ * with the help of sockets. The python side sets up a server and it 
+ * transmits all the data to our C++ client.
+ * This method sets the tcp communication and initializes the socket and 
+ * the client that listens to incoming data.
+ */
 void Face::setup_tcp_communication(void)
 {
     // Sock addr struct
@@ -129,4 +163,29 @@ void Face::setup_tcp_communication(void)
 	{
 		printf("\nConnection Failed \n");
 	}
+}
+
+/**
+ * @brief This is not a homogenous transformation matrix. Instead it is 
+ * used for shifting a matrix of vertices (as defined by libigl) by a given 
+ * offset. 
+ * @param offset The offset to shift the matrix of vertices.
+ * @param vert_num The number of matrices.
+ * @return Eigen::MatrixXd The output translation matrix.
+ */
+Eigen::MatrixXd Face::translation_matrix(const Eigen::Vector3d& offset,
+    size_t vert_num)
+{
+    // Initialize matrix 
+    Eigen::MatrixXd t_mat = Eigen::MatrixXd(vert_num, offset.rows());
+
+    // Ones vector
+    Eigen::VectorXd ones_vec = Eigen::VectorXd::Ones(vert_num);
+
+    for(size_t i = 0; i < offset.rows(); i++)
+    {
+        t_mat.col(i) = offset(i) * ones_vec;
+    }
+
+    return t_mat;
 }

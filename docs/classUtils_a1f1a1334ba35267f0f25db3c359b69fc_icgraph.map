@@ -1,4 +1,4 @@
 <map id="Utils::load_matrix_data" name="Utils::load_matrix_data">
-<area shape="rect" id="node1" title=" " alt="" coords="144,5,319,32"/>
-<area shape="rect" id="node2" href="$classFace.html#afdb634bc2d5287ba0d62e46b57e9dc2e" title=" " alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node1" title="Load Eigen double matrix from csv file." alt="" coords="144,5,319,32"/>
+<area shape="rect" id="node2" href="$classFace.html#afdb634bc2d5287ba0d62e46b57e9dc2e" title="Constructor." alt="" coords="5,5,96,32"/>
 </map>

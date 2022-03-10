@@ -1,5 +1,9 @@
 #include "../include/rendering.h"
 
+/**
+ * @brief Construct a new Rendering:: Rendering object
+ */
+ 
 Rendering::Rendering()
 {
     // Animation

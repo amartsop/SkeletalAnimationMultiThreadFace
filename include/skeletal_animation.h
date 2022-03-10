@@ -31,61 +31,66 @@
 typedef std::vector<Eigen::Quaterniond, 
     Eigen::aligned_allocator<Eigen::Quaterniond>> RotationList;
 
-
+/// Class SkeletalAnimation
+/**
+ * This class implements the skeletal animation for the hand.
+*/
 class SkeletalAnimation
 {
 
 public:
+
+    /// Constructor.
     SkeletalAnimation() {};
 
-    // Initialize animation
+    /// Initialize animation.
     void initialize(igl::opengl::glfw::Viewer* viewer, 
         Exoskeleton* left_exo, AnimatedHand* anim_hand, 
         MenuHandler* menu_handler);
 
-    // Animation loop callback
+    /// Animation loop callback.
     bool animation_loop(igl::opengl::glfw::Viewer & viewer);
 
 private:
 
-    // Mesh filename
+    /// Mesh filename.
     std::string m_hand_mesh_name =
         boost::filesystem::system_complete("share/hand.mesh").string();
     
-    // Skeleton graph filename
+    /// Skeleton graph filename.
     std::string m_hand_graph_name = 
         boost::filesystem::system_complete("share/hand.tgf").string();
 
-    // Texture name 
+    /// Texture name.
     std::string m_hand_texture_name = 
         boost::filesystem::system_complete("share/texture.png").string();
 
 private: 
 
-    // Exoskeleton handler pointer
+    /// Exoskeleton handler pointer.
     Exoskeleton* m_left_exo;
 
-    // Animated hand pointer
+    /// Animated hand pointer.
     AnimatedHand* m_anim_hand;
 
-    // Menu handler pointer
+    /// Menu handler pointer.
     MenuHandler* m_menu_handler;
 
-    // Left and right hand
+    /// Left and right hand.
     std::shared_ptr<Hand> m_left_hand, m_right_hand;
 
-    // Face
+    /// Face handler.
     std::shared_ptr<Face> m_face;
 
-    // Left hand origin
+    /// Left hand origin.
     Eigen::Vector3d m_left_origin = Eigen::Vector3d(1.0, 0.0, 0.0);
 
-    // Right hand origin
+    /// Right hand origin.
     Eigen::Vector3d m_right_origin = Eigen::Vector3d(-1.0, 0.0, 0.0);
 
-    // Bool start animation
+    /// Start animation flag.
     bool m_initialize_animation = 1;
 
-    // Setup meshes
+    /// Setup meshes.
     void setup_meshes(igl::opengl::glfw::Viewer& viewer);
 };

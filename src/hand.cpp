@@ -1,5 +1,17 @@
 #include "../include/hand.h"
 
+/**
+ * @brief Construct a new Hand:: Hand object.
+ * 
+ * @param exo_handler Pointer to the Exoskeleton object.
+ * @param anim_hand Pointer to the AnimatedHand object.
+ * @param mesh_name The name of the mesh file.
+ * @param graph_name The name of the graph file (contains the conections 
+ * between the bones aka the kinematic model).
+ * @param texture_name The name of the texture file.
+ * @param type Bool the define whether the hand is left(0) or right(1).
+ * @param origin The origin of the hand.
+ */
 Hand::Hand(Exoskeleton* exo_handler, AnimatedHand* anim_hand,
     const std::string& mesh_name, const std::string& graph_name,
     const std::string& texture_name, bool type, const Eigen::Vector3d& origin)
@@ -65,7 +77,13 @@ Hand::Hand(Exoskeleton* exo_handler, AnimatedHand* anim_hand,
     m_origin = origin;
 }
     
-// Update hand
+/**
+ * @brief It updates the hand vertices based on the euler angles for its 
+ * skeleton joints. These are fed throught the AnimatedHand::EulerID 
+ * struct. Based on the defined mapping it performs the forward kinematics 
+ * and calcualtes all the hand vertices.
+ * @param euler_id The custom EulerID structure as described in AnimatedHand::EulerID.
+ */
 void Hand::update(const std::vector<AnimatedHand::EulerID>& euler_id)
 {
     for (size_t i = 0; i < euler_id.size(); i++)

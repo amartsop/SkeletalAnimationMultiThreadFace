@@ -14,10 +14,15 @@
 #include <igl/slim.h>
 #include <igl/Camera.h>
 
+/**
+ * @brief This class performs the rendering of the scene. This has been 
+ * included inside a class for better organization of the code due to forking.
+ */
 class Rendering
 {
 
 public:
+    /// Rendering constructor.
     Rendering();
 
 private:

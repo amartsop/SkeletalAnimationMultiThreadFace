@@ -1,12 +1,9 @@
-from base64 import encode
 import socket
 import threading
-from unittest import result
 import cv2 
 import mediapipe as mp
 import numpy as np
 import json
-import sys
 
 
 class FaceMeshServer:
