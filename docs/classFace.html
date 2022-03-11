@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Skeletal Animation Mulrithread Face: Face Class Reference</title>
+<title>Skeletal Animation Multithread Face: Face Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Skeletal Animation Mulrithread Face
+   <div id="projectname">Skeletal Animation Multithread Face
    </div>
   </td>
  </tr>
@@ -89,6 +89,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5641f54e91d88e18c4519d7eaf1d20e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXi&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#ad5641f54e91d88e18c4519d7eaf1d20e">get_surface_indices</a> (void)</td></tr>
 <tr class="memdesc:ad5641f54e91d88e18c4519d7eaf1d20e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the surface indices of the face mesh.  <a href="classFace.html#ad5641f54e91d88e18c4519d7eaf1d20e">More...</a><br /></td></tr>
 <tr class="separator:ad5641f54e91d88e18c4519d7eaf1d20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9699c86e6218483562d9bb432b99ddf8"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a9699c86e6218483562d9bb432b99ddf8">translation_matrix</a> (const Eigen::Vector3d &amp;offset, size_t vert_num)</td></tr>
+<tr class="memdesc:a9699c86e6218483562d9bb432b99ddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function offset a set of vertices by a given offset.  <a href="classFace.html#a9699c86e6218483562d9bb432b99ddf8">More...</a><br /></td></tr>
+<tr class="separator:a9699c86e6218483562d9bb432b99ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -111,7 +114,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a880332c9e10a2f8053cd9e78f2bfc76b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFace.html" title="This class runs the client that handles the vertices coming from the python server face_mesh_server....">Face</a> landmarking indices matrix.  <a href="classFace.html#a880332c9e10a2f8053cd9e78f2bfc76b">More...</a><br /></td></tr>
 <tr class="separator:a880332c9e10a2f8053cd9e78f2bfc76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5b582880751eb2842feb92a53043092"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#aa5b582880751eb2842feb92a53043092">m_local_ip_address</a> = &quot;127.0.1.1&quot;</td></tr>
-<tr class="memdesc:aa5b582880751eb2842feb92a53043092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start tcp client at this ip adress.  <a href="classFace.html#aa5b582880751eb2842feb92a53043092">More...</a><br /></td></tr>
+<tr class="memdesc:aa5b582880751eb2842feb92a53043092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start tcp client at this ip adress (localhost).  <a href="classFace.html#aa5b582880751eb2842feb92a53043092">More...</a><br /></td></tr>
 <tr class="separator:aa5b582880751eb2842feb92a53043092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd14aa6ffa741127cd888159f6bb347b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#abd14aa6ffa741127cd888159f6bb347b">m_tcp_port</a> = 5052</td></tr>
 <tr class="separator:abd14aa6ffa741127cd888159f6bb347b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,16 +141,18 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a7bc26c949aad905c3d0823591bea7e40"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a7bc26c949aad905c3d0823591bea7e40">m_rot_mat</a> = Eigen::Matrix3d::Identity()</td></tr>
 <tr class="memdesc:a7bc26c949aad905c3d0823591bea7e40"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFace.html" title="This class runs the client that handles the vertices coming from the python server face_mesh_server....">Face</a> rotation matrix.  <a href="classFace.html#a7bc26c949aad905c3d0823591bea7e40">More...</a><br /></td></tr>
 <tr class="separator:a7bc26c949aad905c3d0823591bea7e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8449d2242f0991b5a9d50e2fea7f3422"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a8449d2242f0991b5a9d50e2fea7f3422">m_face_mesh_scale</a> = 3.0</td></tr>
+<tr class="memitem:a8449d2242f0991b5a9d50e2fea7f3422"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a8449d2242f0991b5a9d50e2fea7f3422">m_face_mesh_scale</a> = 6.0</td></tr>
 <tr class="memdesc:a8449d2242f0991b5a9d50e2fea7f3422"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classFace.html" title="This class runs the client that handles the vertices coming from the python server face_mesh_server....">Face</a> scale matrix.  <a href="classFace.html#a8449d2242f0991b5a9d50e2fea7f3422">More...</a><br /></td></tr>
 <tr class="separator:a8449d2242f0991b5a9d50e2fea7f3422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c8c71b095b691c8ef4d8e190f44491"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a94c8c71b095b691c8ef4d8e190f44491">m_face_offset</a> = Eigen::Vector3d({0.0, -2.0, 0.0})</td></tr>
+<tr class="separator:a94c8c71b095b691c8ef4d8e190f44491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c28708f18f420b8ac0fd50db404b382"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFace.html#a7c28708f18f420b8ac0fd50db404b382">m_scale_mat</a></td></tr>
 <tr class="separator:a7c28708f18f420b8ac0fd50db404b382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This class runs the client that handles the vertices coming from the python server <a class="el" href="face__mesh__server_8py.html">face_mesh_server.py</a> to render the face landmarking. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00026">26</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00025">25</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afdb634bc2d5287ba0d62e46b57e9dc2e" name="afdb634bc2d5287ba0d62e46b57e9dc2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdb634bc2d5287ba0d62e46b57e9dc2e">&#9670;&nbsp;</a></span>Face()</h2>
@@ -170,11 +175,11 @@ Private Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="face_8cpp_source.html#l00009">9</a> of file <a class="el" href="face_8cpp_source.html">face.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   10</span>{</div>
 <div class="line"><span class="lineno">   11</span>    <span class="comment">// Get absolute file path</span></div>
-<div class="line"><span class="lineno">   12</span>    std::filesystem::path <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> = std::filesystem::current_path();</div>
+<div class="line"><span class="lineno">   12</span>    std::filesystem::path absolute_path = std::filesystem::current_path();</div>
 <div class="line"><span class="lineno">   13</span> </div>
 <div class="line"><span class="lineno">   14</span>    <span class="comment">// Define absolute path of hand configuration file</span></div>
 <div class="line"><span class="lineno">   15</span>    <a class="code hl_variable" href="classFace.html#afd19ba77eb64735a7f37f51587cda7c5">m_vertices_connections_abs_path</a> =</div>
-<div class="line"><span class="lineno">   16</span>        <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> / <a class="code hl_variable" href="classFace.html#a90b41fde140289c7d173ad573dbc9230">m_vertices_connections_rel_filename</a>;</div>
+<div class="line"><span class="lineno">   16</span>        absolute_path / <a class="code hl_variable" href="classFace.html#a90b41fde140289c7d173ad573dbc9230">m_vertices_connections_rel_filename</a>;</div>
 <div class="line"><span class="lineno">   17</span> </div>
 <div class="line"><span class="lineno">   18</span>    <span class="comment">// Read indices matrix</span></div>
 <div class="line"><span class="lineno">   19</span>    Eigen::MatrixXd tmp_faces =</div>
@@ -196,29 +201,29 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   35</span>}</div>
 <div class="ttc" id="aclassEulerRotations_html_a59359356cd2301630d6d58f642acd07b"><div class="ttname"><a href="classEulerRotations.html#a59359356cd2301630d6d58f642acd07b">EulerRotations::rotation</a></div><div class="ttdeci">static Eigen::Matrix3d rotation(double phi, double theta, double psi)</div><div class="ttdoc">Euler rotation matrix z-y'-x''.</div><div class="ttdef"><b>Definition:</b> <a href="euler__rotations_8cpp_source.html#l00066">euler_rotations.cpp:66</a></div></div>
 <div class="ttc" id="aclassFace_html_a19dfb60b29305c28abd5bf444cb2e421"><div class="ttname"><a href="classFace.html#a19dfb60b29305c28abd5bf444cb2e421">Face::incoming_data_callback</a></div><div class="ttdeci">Eigen::MatrixXd incoming_data_callback(void)</div><div class="ttdoc">Read incoming data.</div><div class="ttdef"><b>Definition:</b> <a href="face_8cpp_source.html#l00063">face.cpp:63</a></div></div>
-<div class="ttc" id="aclassFace_html_a1dba96bbebf8642661b961a10e8e5385"><div class="ttname"><a href="classFace.html#a1dba96bbebf8642661b961a10e8e5385">Face::m_vertices_num</a></div><div class="ttdeci">const int m_vertices_num</div><div class="ttdoc">Number of vertices provided by the mediapipe. This is constant.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00079">face.h:79</a></div></div>
-<div class="ttc" id="aclassFace_html_a33f7c82a9ed49f52886de03d0d0a9303"><div class="ttname"><a href="classFace.html#a33f7c82a9ed49f52886de03d0d0a9303">Face::m_surf_indices</a></div><div class="ttdeci">Eigen::MatrixXi m_surf_indices</div><div class="ttdoc">The surface element indices of the incoming mesh.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00082">face.h:82</a></div></div>
-<div class="ttc" id="aclassFace_html_a7bc26c949aad905c3d0823591bea7e40"><div class="ttname"><a href="classFace.html#a7bc26c949aad905c3d0823591bea7e40">Face::m_rot_mat</a></div><div class="ttdeci">Eigen::Matrix3d m_rot_mat</div><div class="ttdoc">Face rotation matrix.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00098">face.h:98</a></div></div>
-<div class="ttc" id="aclassFace_html_a90b41fde140289c7d173ad573dbc9230"><div class="ttname"><a href="classFace.html#a90b41fde140289c7d173ad573dbc9230">Face::m_vertices_connections_rel_filename</a></div><div class="ttdeci">std::string m_vertices_connections_rel_filename</div><div class="ttdoc">Relative name of vertices connection files.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00052">face.h:52</a></div></div>
-<div class="ttc" id="aclassFace_html_aa940da0959759e0f7104679ce73195cd"><div class="ttname"><a href="classFace.html#aa940da0959759e0f7104679ce73195cd">Face::m_vol_mesh_vertices</a></div><div class="ttdeci">Eigen::MatrixXd m_vol_mesh_vertices</div><div class="ttdoc">Volume mesh data.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00095">face.h:95</a></div></div>
-<div class="ttc" id="aclassFace_html_ad8a094484099fb45154ea0cec1a9c73d"><div class="ttname"><a href="classFace.html#ad8a094484099fb45154ea0cec1a9c73d">Face::setup_tcp_communication</a></div><div class="ttdeci">void setup_tcp_communication(void)</div><div class="ttdoc">Setup communication with python server.</div><div class="ttdef"><b>Definition:</b> <a href="face_8cpp_source.html#l00130">face.cpp:130</a></div></div>
-<div class="ttc" id="aclassFace_html_ae448075c1a2b7838e56a0f8e41398acd"><div class="ttname"><a href="classFace.html#ae448075c1a2b7838e56a0f8e41398acd">Face::m_future_fun</a></div><div class="ttdeci">std::future&lt; Eigen::MatrixXd &gt; m_future_fun</div><div class="ttdoc">Future function handle.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00086">face.h:86</a></div></div>
-<div class="ttc" id="aclassFace_html_afd19ba77eb64735a7f37f51587cda7c5"><div class="ttname"><a href="classFace.html#afd19ba77eb64735a7f37f51587cda7c5">Face::m_vertices_connections_abs_path</a></div><div class="ttdeci">std::filesystem::path m_vertices_connections_abs_path</div><div class="ttdoc">Absolute name of vertices connection files.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00049">face.h:49</a></div></div>
+<div class="ttc" id="aclassFace_html_a1dba96bbebf8642661b961a10e8e5385"><div class="ttname"><a href="classFace.html#a1dba96bbebf8642661b961a10e8e5385">Face::m_vertices_num</a></div><div class="ttdeci">const int m_vertices_num</div><div class="ttdoc">Number of vertices provided by the mediapipe. This is constant.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00082">face.h:82</a></div></div>
+<div class="ttc" id="aclassFace_html_a33f7c82a9ed49f52886de03d0d0a9303"><div class="ttname"><a href="classFace.html#a33f7c82a9ed49f52886de03d0d0a9303">Face::m_surf_indices</a></div><div class="ttdeci">Eigen::MatrixXi m_surf_indices</div><div class="ttdoc">The surface element indices of the incoming mesh.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00085">face.h:85</a></div></div>
+<div class="ttc" id="aclassFace_html_a7bc26c949aad905c3d0823591bea7e40"><div class="ttname"><a href="classFace.html#a7bc26c949aad905c3d0823591bea7e40">Face::m_rot_mat</a></div><div class="ttdeci">Eigen::Matrix3d m_rot_mat</div><div class="ttdoc">Face rotation matrix.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00101">face.h:101</a></div></div>
+<div class="ttc" id="aclassFace_html_a90b41fde140289c7d173ad573dbc9230"><div class="ttname"><a href="classFace.html#a90b41fde140289c7d173ad573dbc9230">Face::m_vertices_connections_rel_filename</a></div><div class="ttdeci">std::string m_vertices_connections_rel_filename</div><div class="ttdoc">Relative name of vertices connection files.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00055">face.h:55</a></div></div>
+<div class="ttc" id="aclassFace_html_aa940da0959759e0f7104679ce73195cd"><div class="ttname"><a href="classFace.html#aa940da0959759e0f7104679ce73195cd">Face::m_vol_mesh_vertices</a></div><div class="ttdeci">Eigen::MatrixXd m_vol_mesh_vertices</div><div class="ttdoc">Volume mesh data.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00098">face.h:98</a></div></div>
+<div class="ttc" id="aclassFace_html_ad8a094484099fb45154ea0cec1a9c73d"><div class="ttname"><a href="classFace.html#ad8a094484099fb45154ea0cec1a9c73d">Face::setup_tcp_communication</a></div><div class="ttdeci">void setup_tcp_communication(void)</div><div class="ttdoc">Setup communication with python server.</div><div class="ttdef"><b>Definition:</b> <a href="face_8cpp_source.html#l00143">face.cpp:143</a></div></div>
+<div class="ttc" id="aclassFace_html_ae448075c1a2b7838e56a0f8e41398acd"><div class="ttname"><a href="classFace.html#ae448075c1a2b7838e56a0f8e41398acd">Face::m_future_fun</a></div><div class="ttdeci">std::future&lt; Eigen::MatrixXd &gt; m_future_fun</div><div class="ttdoc">Future function handle.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00089">face.h:89</a></div></div>
+<div class="ttc" id="aclassFace_html_afd19ba77eb64735a7f37f51587cda7c5"><div class="ttname"><a href="classFace.html#afd19ba77eb64735a7f37f51587cda7c5">Face::m_vertices_connections_abs_path</a></div><div class="ttdeci">std::filesystem::path m_vertices_connections_abs_path</div><div class="ttdoc">Absolute name of vertices connection files.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00052">face.h:52</a></div></div>
 <div class="ttc" id="aclassUtils_html_a1f1a1334ba35267f0f25db3c359b69fc"><div class="ttname"><a href="classUtils.html#a1f1a1334ba35267f0f25db3c359b69fc">Utils::load_matrix_data</a></div><div class="ttdeci">static Eigen::MatrixXd load_matrix_data(std::string filename)</div><div class="ttdoc">Load Eigen double matrix from csv file.</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00059">utils.cpp:59</a></div></div>
-<div class="ttc" id="anamespaceports__read_html_ae1b9b8d97281f3866a7c3a7f56806c4d"><div class="ttname"><a href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">ports_read.absolute_path</a></div><div class="ttdeci">absolute_path</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00026">ports_read.py:26</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFace_afdb634bc2d5287ba0d62e46b57e9dc2e_cgraph.png" border="0" usemap="#aclassFace_afdb634bc2d5287ba0d62e46b57e9dc2e_cgraph" alt=""/></div>
 <map name="aclassFace_afdb634bc2d5287ba0d62e46b57e9dc2e_cgraph" id="aclassFace_afdb634bc2d5287ba0d62e46b57e9dc2e_cgraph">
-<area shape="rect" title="Constructor." alt="" coords="5,97,96,123"/>
+<area shape="rect" title="Constructor." alt="" coords="5,103,96,130"/>
 <area shape="rect" href="classFace.html#a19dfb60b29305c28abd5bf444cb2e421" title="Read incoming data." alt="" coords="181,5,337,47"/>
-<area shape="rect" href="classUtils.html#a1f1a1334ba35267f0f25db3c359b69fc" title="Load Eigen double matrix from csv file." alt="" coords="172,71,347,98"/>
-<area shape="rect" href="classEulerRotations.html#a59359356cd2301630d6d58f642acd07b" title="Euler rotation matrix z&#45;y&#39;&#45;x&#39;&#39;." alt="" coords="171,122,347,149"/>
-<area shape="rect" href="classFace.html#ad8a094484099fb45154ea0cec1a9c73d" title="Setup communication with python server." alt="" coords="144,173,375,199"/>
-<area shape="rect" href="classEulerRotations.html#a9820b5640bb42c5caa771d04ee2f523f" title="Basic rotation matrix wrt x axis." alt="" coords="423,49,581,91"/>
-<area shape="rect" href="classEulerRotations.html#a6d58dc1b46a675abcd7d2a314f03758b" title="Basic rotation matrix wrt y axis." alt="" coords="423,115,581,156"/>
-<area shape="rect" href="classEulerRotations.html#ac2a2309c6e4132a487d973d93456629c" title="Basic rotation matrix wrt z axis." alt="" coords="423,180,581,221"/>
+<area shape="rect" href="classUtils.html#a1f1a1334ba35267f0f25db3c359b69fc" title="Load Eigen double matrix from csv file." alt="" coords="172,78,347,105"/>
+<area shape="rect" href="classEulerRotations.html#a59359356cd2301630d6d58f642acd07b" title="Euler rotation matrix z&#45;y&#39;&#45;x&#39;&#39;." alt="" coords="171,129,347,155"/>
+<area shape="rect" href="classFace.html#ad8a094484099fb45154ea0cec1a9c73d" title="Setup communication with python server." alt="" coords="144,179,375,206"/>
+<area shape="rect" href="classFace.html#a9699c86e6218483562d9bb432b99ddf8" title="This function offset a set of vertices by a given offset." alt="" coords="423,9,603,35"/>
+<area shape="rect" href="classEulerRotations.html#a9820b5640bb42c5caa771d04ee2f523f" title="Basic rotation matrix wrt x axis." alt="" coords="433,60,592,101"/>
+<area shape="rect" href="classEulerRotations.html#a6d58dc1b46a675abcd7d2a314f03758b" title="Basic rotation matrix wrt y axis." alt="" coords="433,125,592,167"/>
+<area shape="rect" href="classEulerRotations.html#ac2a2309c6e4132a487d973d93456629c" title="Basic rotation matrix wrt z axis." alt="" coords="433,191,592,232"/>
 </map>
 </div>
 
@@ -252,8 +257,8 @@ Here is the call graph for this function:</div>
 <p>Get the surface indices of the face mesh. </p>
 <dl class="section return"><dt>Returns</dt><dd>Eigen::MatrixXi The surface indices matrix. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00044">44</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classFace.html#a33f7c82a9ed49f52886de03d0d0a9303">m_surf_indices</a>; } </div>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00043">43</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classFace.html#a33f7c82a9ed49f52886de03d0d0a9303">m_surf_indices</a>; } </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -291,7 +296,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   52</span> </div>
 <div class="line"><span class="lineno">   53</span>    <span class="keywordflow">return</span> vertices;</div>
 <div class="line"><span class="lineno">   54</span>}</div>
-<div class="ttc" id="aclassFace_html_acf9342ca2939da306bae1d5c6da0f86c"><div class="ttname"><a href="classFace.html#acf9342ca2939da306bae1d5c6da0f86c">Face::m_return_value</a></div><div class="ttdeci">bool m_return_value</div><div class="ttdoc">Termination flag for callback function.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00089">face.h:89</a></div></div>
+<div class="ttc" id="aclassFace_html_acf9342ca2939da306bae1d5c6da0f86c"><div class="ttname"><a href="classFace.html#acf9342ca2939da306bae1d5c6da0f86c">Face::m_return_value</a></div><div class="ttdeci">bool m_return_value</div><div class="ttdoc">Termination flag for callback function.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00092">face.h:92</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -299,6 +304,7 @@ Here is the call graph for this function:</div>
 <map name="aclassFace_a60d0cbb5780d2567689681c23c467ac8_cgraph" id="aclassFace_a60d0cbb5780d2567689681c23c467ac8_cgraph">
 <area shape="rect" title="Get face vertices." alt="" coords="5,13,145,39"/>
 <area shape="rect" href="classFace.html#a19dfb60b29305c28abd5bf444cb2e421" title="Read incoming data." alt="" coords="193,5,349,47"/>
+<area shape="rect" href="classFace.html#a9699c86e6218483562d9bb432b99ddf8" title="This function offset a set of vertices by a given offset." alt="" coords="397,13,577,39"/>
 </map>
 </div>
 
@@ -382,17 +388,41 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  110</span>                vol_mesh_vertices(i, 2) = z_pc[i];</div>
 <div class="line"><span class="lineno">  111</span>            }</div>
 <div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>            <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a> = (<a class="code hl_variable" href="classFace.html#a7c28708f18f420b8ac0fd50db404b382">m_scale_mat</a> * <a class="code hl_variable" href="classFace.html#a7bc26c949aad905c3d0823591bea7e40">m_rot_mat</a> *</div>
-<div class="line"><span class="lineno">  114</span>                vol_mesh_vertices.transpose()).transpose();</div>
-<div class="line"><span class="lineno">  115</span>        }</div>
-<div class="line"><span class="lineno">  116</span>    }</div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a>; </div>
-<div class="line"><span class="lineno">  119</span>}</div>
-<div class="ttc" id="aclassFace_html_a2f7b4f73e9b62fca09da859c91b1fe9e"><div class="ttname"><a href="classFace.html#a2f7b4f73e9b62fca09da859c91b1fe9e">Face::m_buffer_size</a></div><div class="ttdeci">const int m_buffer_size</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00076">face.h:76</a></div></div>
-<div class="ttc" id="aclassFace_html_a6dbd5c2998cec976c1c9879ab61c9249"><div class="ttname"><a href="classFace.html#a6dbd5c2998cec976c1c9879ab61c9249">Face::m_socket</a></div><div class="ttdeci">int m_socket</div><div class="ttdoc">Socket handle.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00070">face.h:70</a></div></div>
-<div class="ttc" id="aclassFace_html_a7c28708f18f420b8ac0fd50db404b382"><div class="ttname"><a href="classFace.html#a7c28708f18f420b8ac0fd50db404b382">Face::m_scale_mat</a></div><div class="ttdeci">Eigen::Matrix3d m_scale_mat</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00102">face.h:102</a></div></div>
+<div class="line"><span class="lineno">  113</span>            <span class="comment">// Rotate and scale vertices</span></div>
+<div class="line"><span class="lineno">  114</span>            <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a> = (<a class="code hl_variable" href="classFace.html#a7c28708f18f420b8ac0fd50db404b382">m_scale_mat</a> * <a class="code hl_variable" href="classFace.html#a7bc26c949aad905c3d0823591bea7e40">m_rot_mat</a> *</div>
+<div class="line"><span class="lineno">  115</span>                vol_mesh_vertices.transpose()).transpose();</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>            <span class="comment">// Find centre of geometry</span></div>
+<div class="line"><span class="lineno">  118</span>            <span class="keywordtype">double</span> x_cg = <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a>.col(0).sum() / <a class="code hl_variable" href="classFace.html#a1dba96bbebf8642661b961a10e8e5385">m_vertices_num</a>;</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordtype">double</span> y_cg = <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a>.col(1).sum() / <a class="code hl_variable" href="classFace.html#a1dba96bbebf8642661b961a10e8e5385">m_vertices_num</a>;</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordtype">double</span> z_cg = <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a>.col(2).sum() / <a class="code hl_variable" href="classFace.html#a1dba96bbebf8642661b961a10e8e5385">m_vertices_num</a>;</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>            <span class="comment">// Reset face offset</span></div>
+<div class="line"><span class="lineno">  123</span>            Eigen::Vector3d face_offset = <a class="code hl_variable" href="classFace.html#a94c8c71b095b691c8ef4d8e190f44491">m_face_offset</a> +</div>
+<div class="line"><span class="lineno">  124</span>                Eigen::Vector3d({x_cg, y_cg, z_cg});</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>            <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a> -= (<a class="code hl_function" href="classFace.html#a9699c86e6218483562d9bb432b99ddf8">translation_matrix</a>(face_offset,</div>
+<div class="line"><span class="lineno">  127</span>                <a class="code hl_variable" href="classFace.html#a1dba96bbebf8642661b961a10e8e5385">m_vertices_num</a>));</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span>    }</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classFace.html#aa940da0959759e0f7104679ce73195cd">m_vol_mesh_vertices</a>; </div>
+<div class="line"><span class="lineno">  132</span>}</div>
+<div class="ttc" id="aclassFace_html_a2f7b4f73e9b62fca09da859c91b1fe9e"><div class="ttname"><a href="classFace.html#a2f7b4f73e9b62fca09da859c91b1fe9e">Face::m_buffer_size</a></div><div class="ttdeci">const int m_buffer_size</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00079">face.h:79</a></div></div>
+<div class="ttc" id="aclassFace_html_a6dbd5c2998cec976c1c9879ab61c9249"><div class="ttname"><a href="classFace.html#a6dbd5c2998cec976c1c9879ab61c9249">Face::m_socket</a></div><div class="ttdeci">int m_socket</div><div class="ttdoc">Socket handle.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00073">face.h:73</a></div></div>
+<div class="ttc" id="aclassFace_html_a7c28708f18f420b8ac0fd50db404b382"><div class="ttname"><a href="classFace.html#a7c28708f18f420b8ac0fd50db404b382">Face::m_scale_mat</a></div><div class="ttdeci">Eigen::Matrix3d m_scale_mat</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00106">face.h:106</a></div></div>
+<div class="ttc" id="aclassFace_html_a94c8c71b095b691c8ef4d8e190f44491"><div class="ttname"><a href="classFace.html#a94c8c71b095b691c8ef4d8e190f44491">Face::m_face_offset</a></div><div class="ttdeci">Eigen::Vector3d m_face_offset</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00105">face.h:105</a></div></div>
+<div class="ttc" id="aclassFace_html_a9699c86e6218483562d9bb432b99ddf8"><div class="ttname"><a href="classFace.html#a9699c86e6218483562d9bb432b99ddf8">Face::translation_matrix</a></div><div class="ttdeci">Eigen::MatrixXd translation_matrix(const Eigen::Vector3d &amp;offset, size_t vert_num)</div><div class="ttdoc">This function offset a set of vertices by a given offset.</div><div class="ttdef"><b>Definition:</b> <a href="face_8cpp_source.html#l00176">face.cpp:176</a></div></div>
 </div><!-- fragment --><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFace_a19dfb60b29305c28abd5bf444cb2e421_cgraph.png" border="0" usemap="#aclassFace_a19dfb60b29305c28abd5bf444cb2e421_cgraph" alt=""/></div>
+<map name="aclassFace_a19dfb60b29305c28abd5bf444cb2e421_cgraph" id="aclassFace_a19dfb60b29305c28abd5bf444cb2e421_cgraph">
+<area shape="rect" title="Read incoming data." alt="" coords="5,5,161,47"/>
+<area shape="rect" href="classFace.html#a9699c86e6218483562d9bb432b99ddf8" title="This function offset a set of vertices by a given offset." alt="" coords="209,13,389,39"/>
+</map>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classFace_a19dfb60b29305c28abd5bf444cb2e421_icgraph.png" border="0" usemap="#aclassFace_a19dfb60b29305c28abd5bf444cb2e421_icgraph" alt=""/></div>
@@ -430,34 +460,34 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Setup communication with python server. </p>
-<p >Since the libraries for face landmarking are all written in python, we establish an Inter-process communication (IPC), to get all the data in our C++ program. In this case the IPC is implemented with the help of sockets. The python side sets up a server and it transmits all the data to our C++ client. This method sets the tcp communication and initializes the socket and the client that listens to incoming data. </p>
+<p >Since the libraries for face landmarking are all written in Python, we establish an Inter-process communication (IPC), to get all the data in our C++ program. In this case the IPC is implemented with the help of sockets. The python side sets up a server and it transmits all the data to our C++ client. This method sets the tcp communication and initializes the socket and the client that listens to incoming data. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8cpp_source.html#l00130">130</a> of file <a class="el" href="face_8cpp_source.html">face.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>{</div>
-<div class="line"><span class="lineno">  132</span>    <span class="comment">// Sock addr struct</span></div>
-<div class="line"><span class="lineno">  133</span>    <span class="keyword">struct </span>sockaddr_in serv_addr;</div>
-<div class="line"><span class="lineno">  134</span> </div>
-<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="classFace.html#a6dbd5c2998cec976c1c9879ab61c9249">m_socket</a> = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0)</div>
-<div class="line"><span class="lineno">  136</span>    {</div>
-<div class="line"><span class="lineno">  137</span>        printf(<span class="stringliteral">&quot;\n Socket creation error \n&quot;</span>);</div>
-<div class="line"><span class="lineno">  138</span>    }</div>
-<div class="line"><span class="lineno">  139</span> </div>
-<div class="line"><span class="lineno">  140</span>    serv_addr.sin_family = AF_INET;</div>
-<div class="line"><span class="lineno">  141</span>    serv_addr.sin_port = htons(<a class="code hl_variable" href="classFace.html#abd14aa6ffa741127cd888159f6bb347b">m_tcp_port</a>);</div>
-<div class="line"><span class="lineno">  142</span>    </div>
-<div class="line"><span class="lineno">  143</span>    <span class="comment">// Convert IPv4 and IPv6 addresses from text to binary form</span></div>
-<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">if</span>(inet_pton(AF_INET, <a class="code hl_variable" href="classFace.html#aa5b582880751eb2842feb92a53043092">m_local_ip_address</a>.c_str(), &amp;serv_addr.sin_addr)&lt;=0)</div>
-<div class="line"><span class="lineno">  145</span>    {</div>
-<div class="line"><span class="lineno">  146</span>        printf(<span class="stringliteral">&quot;\nInvalid address/ Address not supported \n&quot;</span>);</div>
-<div class="line"><span class="lineno">  147</span>    }</div>
-<div class="line"><span class="lineno">  148</span> </div>
-<div class="line"><span class="lineno">  149</span>    <span class="keywordflow">if</span> (connect(<a class="code hl_variable" href="classFace.html#a6dbd5c2998cec976c1c9879ab61c9249">m_socket</a>, (<span class="keyword">struct</span> sockaddr *)&amp;serv_addr, <span class="keyword">sizeof</span>(serv_addr)) &lt; 0)</div>
-<div class="line"><span class="lineno">  150</span>    {</div>
-<div class="line"><span class="lineno">  151</span>        printf(<span class="stringliteral">&quot;\nConnection Failed \n&quot;</span>);</div>
-<div class="line"><span class="lineno">  152</span>    }</div>
-<div class="line"><span class="lineno">  153</span>}</div>
-<div class="ttc" id="aclassFace_html_aa5b582880751eb2842feb92a53043092"><div class="ttname"><a href="classFace.html#aa5b582880751eb2842feb92a53043092">Face::m_local_ip_address</a></div><div class="ttdeci">std::string m_local_ip_address</div><div class="ttdoc">Start tcp client at this ip adress.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00063">face.h:63</a></div></div>
-<div class="ttc" id="aclassFace_html_abd14aa6ffa741127cd888159f6bb347b"><div class="ttname"><a href="classFace.html#abd14aa6ffa741127cd888159f6bb347b">Face::m_tcp_port</a></div><div class="ttdeci">const int m_tcp_port</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00067">face.h:67</a></div></div>
+<p class="definition">Definition at line <a class="el" href="face_8cpp_source.html#l00143">143</a> of file <a class="el" href="face_8cpp_source.html">face.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>{</div>
+<div class="line"><span class="lineno">  145</span>    <span class="comment">// Sock addr struct</span></div>
+<div class="line"><span class="lineno">  146</span>    <span class="keyword">struct </span>sockaddr_in serv_addr;</div>
+<div class="line"><span class="lineno">  147</span> </div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">if</span> ((<a class="code hl_variable" href="classFace.html#a6dbd5c2998cec976c1c9879ab61c9249">m_socket</a> = socket(AF_INET, SOCK_STREAM, 0)) &lt; 0)</div>
+<div class="line"><span class="lineno">  149</span>    {</div>
+<div class="line"><span class="lineno">  150</span>        printf(<span class="stringliteral">&quot;\n Socket creation error \n&quot;</span>);</div>
+<div class="line"><span class="lineno">  151</span>    }</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>    serv_addr.sin_family = AF_INET;</div>
+<div class="line"><span class="lineno">  154</span>    serv_addr.sin_port = htons(<a class="code hl_variable" href="classFace.html#abd14aa6ffa741127cd888159f6bb347b">m_tcp_port</a>);</div>
+<div class="line"><span class="lineno">  155</span>    </div>
+<div class="line"><span class="lineno">  156</span>    <span class="comment">// Convert IPv4 and IPv6 addresses from text to binary form</span></div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span>(inet_pton(AF_INET, <a class="code hl_variable" href="classFace.html#aa5b582880751eb2842feb92a53043092">m_local_ip_address</a>.c_str(), &amp;serv_addr.sin_addr)&lt;=0)</div>
+<div class="line"><span class="lineno">  158</span>    {</div>
+<div class="line"><span class="lineno">  159</span>        printf(<span class="stringliteral">&quot;\nInvalid address/ Address not supported \n&quot;</span>);</div>
+<div class="line"><span class="lineno">  160</span>    }</div>
+<div class="line"><span class="lineno">  161</span> </div>
+<div class="line"><span class="lineno">  162</span>    <span class="keywordflow">if</span> (connect(<a class="code hl_variable" href="classFace.html#a6dbd5c2998cec976c1c9879ab61c9249">m_socket</a>, (<span class="keyword">struct</span> sockaddr *)&amp;serv_addr, <span class="keyword">sizeof</span>(serv_addr)) &lt; 0)</div>
+<div class="line"><span class="lineno">  163</span>    {</div>
+<div class="line"><span class="lineno">  164</span>        printf(<span class="stringliteral">&quot;\nConnection Failed \n&quot;</span>);</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
+<div class="line"><span class="lineno">  166</span>}</div>
+<div class="ttc" id="aclassFace_html_aa5b582880751eb2842feb92a53043092"><div class="ttname"><a href="classFace.html#aa5b582880751eb2842feb92a53043092">Face::m_local_ip_address</a></div><div class="ttdeci">std::string m_local_ip_address</div><div class="ttdoc">Start tcp client at this ip adress (localhost).</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00066">face.h:66</a></div></div>
+<div class="ttc" id="aclassFace_html_abd14aa6ffa741127cd888159f6bb347b"><div class="ttname"><a href="classFace.html#abd14aa6ffa741127cd888159f6bb347b">Face::m_tcp_port</a></div><div class="ttdeci">const int m_tcp_port</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00070">face.h:70</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -465,6 +495,72 @@ Here is the caller graph for this function:</div>
 <map name="aclassFace_ad8a094484099fb45154ea0cec1a9c73d_icgraph" id="aclassFace_ad8a094484099fb45154ea0cec1a9c73d_icgraph">
 <area shape="rect" title="Setup communication with python server." alt="" coords="144,5,375,32"/>
 <area shape="rect" href="classFace.html#afdb634bc2d5287ba0d62e46b57e9dc2e" title="Constructor." alt="" coords="5,5,96,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9699c86e6218483562d9bb432b99ddf8" name="a9699c86e6218483562d9bb432b99ddf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9699c86e6218483562d9bb432b99ddf8">&#9670;&nbsp;</a></span>translation_matrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd Face::translation_matrix </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>vert_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function offset a set of vertices by a given offset. </p>
+<p >This is not a homogenous transformation matrix. Instead it is used for shifting a matrix of vertices (as defined by libigl) by a given offset.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>The offset to shift the matrix of vertices. </td></tr>
+    <tr><td class="paramname">vert_num</td><td>The number of matrices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Eigen::MatrixXd The output translation matrix. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="face_8cpp_source.html#l00176">176</a> of file <a class="el" href="face_8cpp_source.html">face.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>{</div>
+<div class="line"><span class="lineno">  179</span>    <span class="comment">// Initialize matrix </span></div>
+<div class="line"><span class="lineno">  180</span>    Eigen::MatrixXd t_mat = Eigen::MatrixXd(vert_num, offset.rows());</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    <span class="comment">// Ones vector</span></div>
+<div class="line"><span class="lineno">  183</span>    Eigen::VectorXd ones_vec = Eigen::VectorXd::Ones(vert_num);</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; offset.rows(); i++)</div>
+<div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>        t_mat.col(i) = offset(i) * ones_vec;</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">return</span> t_mat;</div>
+<div class="line"><span class="lineno">  191</span>}</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFace_a9699c86e6218483562d9bb432b99ddf8_icgraph.png" border="0" usemap="#aclassFace_a9699c86e6218483562d9bb432b99ddf8_icgraph" alt=""/></div>
+<map name="aclassFace_a9699c86e6218483562d9bb432b99ddf8_icgraph" id="aclassFace_a9699c86e6218483562d9bb432b99ddf8_icgraph">
+<area shape="rect" title="This function offset a set of vertices by a given offset." alt="" coords="397,31,577,57"/>
+<area shape="rect" href="classFace.html#a19dfb60b29305c28abd5bf444cb2e421" title="Read incoming data." alt="" coords="193,23,349,65"/>
+<area shape="rect" href="classFace.html#afdb634bc2d5287ba0d62e46b57e9dc2e" title="Constructor." alt="" coords="30,5,121,32"/>
+<area shape="rect" href="classFace.html#a60d0cbb5780d2567689681c23c467ac8" title="Get face vertices." alt="" coords="5,56,145,83"/>
 </map>
 </div>
 
@@ -510,7 +606,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >Buffer size for reading the vertices message. The number of vertices is constant and this buffer size is enough. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00076">76</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00079">79</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -524,7 +620,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Face::m_face_mesh_scale = 3.0</td>
+          <td class="memname">double Face::m_face_mesh_scale = 6.0</td>
         </tr>
       </table>
   </td>
@@ -536,7 +632,31 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="classFace.html" title="This class runs the client that handles the vertices coming from the python server face_mesh_server....">Face</a> scale matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00101">101</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00104">104</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+
+</div>
+</div>
+<a id="a94c8c71b095b691c8ef4d8e190f44491" name="a94c8c71b095b691c8ef4d8e190f44491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c8c71b095b691c8ef4d8e190f44491">&#9670;&nbsp;</a></span>m_face_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Vector3d Face::m_face_offset = Eigen::Vector3d({0.0, -2.0, 0.0})</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00105">105</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -562,7 +682,7 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="classFace.html" title="This class runs the client that handles the vertices coming from the python server face_mesh_server....">Face</a> landmarking indices matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00056">56</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00059">59</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +708,7 @@ Here is the caller graph for this function:</div>
 
 <p>Future function handle. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00086">86</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00089">89</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -612,9 +732,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Start tcp client at this ip adress. </p>
+<p>Start tcp client at this ip adress (localhost). </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00063">63</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00066">66</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -640,7 +760,7 @@ Here is the caller graph for this function:</div>
 
 <p>Termination flag for callback function. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00089">89</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00092">92</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -666,7 +786,7 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="classFace.html" title="This class runs the client that handles the vertices coming from the python server face_mesh_server....">Face</a> rotation matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00098">98</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00101">101</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -691,9 +811,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        <a class="code hl_variable" href="classFace.html#a8449d2242f0991b5a9d50e2fea7f3422">m_face_mesh_scale</a> * Eigen::Matrix3d::Identity()</div>
-<div class="ttc" id="aclassFace_html_a8449d2242f0991b5a9d50e2fea7f3422"><div class="ttname"><a href="classFace.html#a8449d2242f0991b5a9d50e2fea7f3422">Face::m_face_mesh_scale</a></div><div class="ttdeci">double m_face_mesh_scale</div><div class="ttdoc">Face scale matrix.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00101">face.h:101</a></div></div>
+<div class="ttc" id="aclassFace_html_a8449d2242f0991b5a9d50e2fea7f3422"><div class="ttname"><a href="classFace.html#a8449d2242f0991b5a9d50e2fea7f3422">Face::m_face_mesh_scale</a></div><div class="ttdeci">double m_face_mesh_scale</div><div class="ttdoc">Face scale matrix.</div><div class="ttdef"><b>Definition:</b> <a href="face_8h_source.html#l00104">face.h:104</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00102">102</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00106">106</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -719,7 +839,7 @@ Here is the caller graph for this function:</div>
 
 <p>Socket handle. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00070">70</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00073">73</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +865,7 @@ Here is the caller graph for this function:</div>
 
 <p>The surface element indices of the incoming mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00082">82</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00085">85</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -770,7 +890,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p >Tcp port for socket communication (this might need to be changed if it already occupied.) </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00067">67</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00070">70</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -796,7 +916,7 @@ Here is the caller graph for this function:</div>
 
 <p>Absolute name of vertices connection files. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00049">49</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00052">52</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -824,7 +944,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p>Relative name of vertices connection files. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00052">52</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00055">55</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -850,7 +970,7 @@ Here is the caller graph for this function:</div>
 
 <p>Number of vertices provided by the mediapipe. This is constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00079">79</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00082">82</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>
@@ -876,7 +996,7 @@ Here is the caller graph for this function:</div>
 
 <p>Volume mesh data. </p>
 
-<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00095">95</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="face_8h_source.html#l00098">98</a> of file <a class="el" href="face_8h_source.html">face.h</a>.</p>
 
 </div>
 </div>

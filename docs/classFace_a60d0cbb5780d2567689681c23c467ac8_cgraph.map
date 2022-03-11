@@ -1,4 +1,5 @@
 <map id="Face::get_vertices" name="Face::get_vertices">
 <area shape="rect" id="node1" title="Get face vertices." alt="" coords="5,13,145,39"/>
 <area shape="rect" id="node2" href="$classFace.html#a19dfb60b29305c28abd5bf444cb2e421" title="Read incoming data." alt="" coords="193,5,349,47"/>
+<area shape="rect" id="node3" href="$classFace.html#a9699c86e6218483562d9bb432b99ddf8" title="This function offset a set of vertices by a given offset." alt="" coords="397,13,577,39"/>
 </map>
